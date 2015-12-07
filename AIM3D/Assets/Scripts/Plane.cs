@@ -4,12 +4,18 @@ using System.Collections;
 public class Plane : MonoBehaviour {
 
     private float speed = 90f;
+    private int i;
 
     void FixedUpdate()
     {
         transform.position += transform.forward * Time.deltaTime * speed;
 
         speed -= transform.forward.y * Time.deltaTime * 50f;
+
+        if (Input.GetKey("space"))
+        {
+            speed++;
+        }
 
         //minimum & maximum speed
         if (speed < 45f)
@@ -23,6 +29,15 @@ public class Plane : MonoBehaviour {
 
         transform.Rotate(Input.GetAxis("Vertical") * 1.5f, 0.0f, -Input.GetAxis("Horizontal") * 1.8f);
 
-        Debug.Log(transform.rotation);
+        if (Input.GetAxis("Horizontal") == 1f)
+        {
+            
+        }
+        else if(Input.GetAxis("Horizontal") == -1f)
+        {
+            transform.Rotate(Vector3.right * Time.deltaTime);
+        }
+
+        Debug.Log(transform.rotation.x);
     }
 }
