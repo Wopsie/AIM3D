@@ -23,11 +23,6 @@ public class Plane : MonoBehaviour {
 
         transform.Rotate(Input.GetAxis("Vertical") * 1.5f, 0.0f, -Input.GetAxis("Horizontal") * 1.8f);
 
-        float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight(transform.position);
-
-        if (terrainHeightWhereWeAre > transform.position.y)
-        {
-            transform.position = new Vector3(transform.position.x, terrainHeightWhereWeAre, transform.position.z);
-        }
+        Debug.Log(transform.rotation);
     }
 }
