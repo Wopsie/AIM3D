@@ -1,16 +1,30 @@
 fileFormatVersion: 2
-guid: d7146511dc1f744449c2a50ac121e1c6
-timeCreated: 1449232512
+guid: 394defe81f42d4edbb6bb72ccd366104
+timeCreated: 1449478800
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube
-    6400000: //RootNode
+    100000: Buildings_2
+    100002: Cylinder
+    100004: Disc
+    100006: //RootNode
+    400000: Buildings_2
+    400002: Cylinder
+    400004: Disc
+    400006: //RootNode
+    2300000: Buildings_2
+    2300002: Cylinder
+    2300004: Disc
+    3300000: Buildings_2
+    3300002: Cylinder
+    3300004: Disc
+    4300000: Cylinder
+    4300002: Buildings_2
+    4300004: Disc
+    6400000: Buildings_2
+    6400002: Cylinder
+    6400004: Disc
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -12,9 +12,10 @@ public class Plane : MonoBehaviour {
 
         speed -= transform.forward.y * Time.deltaTime * 50f;
 
-        if (Input.GetKey("space"))
+        if (Input.GetKey("space") || Input.GetButton("A"))
         {
             speed++;
+			Debug.Log("Speed UP");
         }
 
         //minimum & maximum speed
@@ -38,6 +39,6 @@ public class Plane : MonoBehaviour {
             transform.Rotate(Vector3.right * Time.deltaTime);
         }
 
-        Debug.Log(transform.rotation.x);
+        //Debug.Log(transform.rotation.x);
     }
 }
