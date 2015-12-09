@@ -27,25 +27,25 @@ public class ControllerTest : MonoBehaviour {
 		float leftTrigger = Input.GetAxis ("LeftTrigger");
 
 		//Keycodes are for dev use only!
-		if(rightTrigger > 0 || Input.GetKeyDown(KeyCode.M))
+		if(rightTrigger > 0.9 || Input.GetKeyDown(KeyCode.M))
 		{
-			Debug.Log ("RightTrigger Pressed");
+			//Debug.Log ("RightTrigger Pressed");
 			var clone = (GameObject)Instantiate(shooter[shoot], transform.position, Quaternion.identity);
 			//Shoot
 		}
 		if(leftTrigger > 0 || Input.GetKeyDown(KeyCode.N))
 		{
-			Debug.Log ("LeftTrigger Pressed");
+			//Debug.Log ("LeftTrigger Pressed");
 			//Aim??
 		}
 		if(rightTrigger == 0 && leftTrigger == 0)
 		{
-			Debug.Log("<color=red>Nothing is Pressed</color>");
+			//Debug.Log("<color=red>Nothing is Pressed</color>");
 			//No triggers pressed
 		}
 		else if(rightTrigger > 0 && leftTrigger > 0)
 		{
-			Debug.Log("Both are pressed");
+			//Debug.Log("Both are pressed");
 		}
 	}
 }
