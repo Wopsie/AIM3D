@@ -71,6 +71,7 @@ public class Plane : MonoBehaviour {
             }
         }
 
+        //Debug.Log(transform.rotation.x);
         //rotate plane banking
         if (Input.GetAxis("Horizontal") > 0f)
         {
