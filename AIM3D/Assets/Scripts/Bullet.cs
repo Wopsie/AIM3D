@@ -4,7 +4,7 @@ using System.Collections;
 public class Bullet : MonoBehaviour 
 {	
 	[SerializeField]    private float bulletDamage;
-	private float speed = 1000;
+	private float speed = 750;
 	public float Speed{get{return speed;}set{speed = value;}}
 
 	void Update () {

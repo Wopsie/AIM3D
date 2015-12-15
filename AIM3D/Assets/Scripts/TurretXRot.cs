@@ -8,10 +8,20 @@ public class TurretXRot : MonoBehaviour
 
     [SerializeField]    private Transform target;
     private Shooter shootClass;
+    private int shootCoolDown;
 
     void Start()
     {
         shootClass = GetComponentInChildren<Shooter>();
+    }
+
+    void FixedUpdate()
+    {
+        shootCoolDown--;
+        if(shootCoolDown < 0)
+        {
+            shootCoolDown = 0;
+        }
     }
 
     void Update()
@@ -19,7 +29,13 @@ public class TurretXRot : MonoBehaviour
         Vector3 targetYPos = new Vector3(target.position.x, target.position.y, target.position.z);
         transform.LookAt(targetYPos);
 
-        shootClass.Shoot();
+        if(shootCoolDown == 0)
+        {
+            shootClass.Shoot();
+            shootCoolDown = 10;
+        }
+
+        
 
         if(transform.rotation.eulerAngles.x >15f && transform.rotation.eulerAngles.x <180)
         {
