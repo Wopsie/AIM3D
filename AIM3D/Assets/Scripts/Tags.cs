@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Tags {
 
-    private string playerTag = "Player";
-    private string bulletTag = "Bullet";
-    private string turretTag = "Turret";
+    public const string playerTag = "Player";
+    public const string bulletTag = "Bullet";
+    public const string turretTag = "Turret";
 
 	// Use this for initialization
 	void Start () {

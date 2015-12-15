@@ -10,17 +10,12 @@ public class Plane : MonoBehaviour {
 
     private float angleZ;
 
-
-    /*
-    if(angleZ > 180f && angleZ < 270f)
+    public Vector3 playerRot;
+    
+    void Update()
     {
-        angleZ = 270f;
-    }   
-    else if (angleZ < 180 && angleZ > 90f)
-    {
-        angleZ = 90f;
+        playerRot = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
     }
-    */       
     
     void FixedUpdate()
     {
@@ -47,8 +42,6 @@ public class Plane : MonoBehaviour {
         }
 
         //transform.Rotate(Input.GetAxis("Vertical") * 1.5f, 0.0f);
-
-        //angleZ = new Vector3(Mathf.Clamp(Time.time, 90, 270));
         
         if(Input.GetAxis("Vertical") > 0)
         {
@@ -76,7 +69,7 @@ public class Plane : MonoBehaviour {
         {
             //bank & turn right
             transform.Rotate(new Vector3(0, 2, 0), Space.World);
-            transform.Rotate(new Vector3(0f, 0f, -2f), Space.Self);
+            transform.Rotate(new Vector3(0f, 0f, -2.8f), Space.Self);
 
             if(transform.rotation.eulerAngles.z > 180 && transform.rotation.eulerAngles.z < 280)
             {
@@ -87,7 +80,7 @@ public class Plane : MonoBehaviour {
         {
             //bank & turn left
             transform.Rotate(new Vector3(0, -2, 0), Space.World);
-            transform.Rotate(new Vector3(0f, 0f, 2f), Space.Self);
+            transform.Rotate(new Vector3(0f, 0f, 2.8f), Space.Self);
 
             if (transform.rotation.eulerAngles.z > 80 && transform.rotation.eulerAngles.z < 180)
             {
@@ -108,33 +101,5 @@ public class Plane : MonoBehaviour {
                 transform.Rotate(new Vector3(0, 0, -2) * 2, Space.Self);
             }
         }
-
-        //set maximum rotation for plane on Z axis
-
-        /*
-        float clampedZ = ClampAngle(transform.rotation.eulerAngles.z, 0, 10);
-        Vector3 rot = transform.rotation.eulerAngles;
-        rot.z = clampedZ;
-        Debug.Log(clampedZ);
-        transform.rotation.SetEulerAngles(rot);
-        */
-        Debug.Log(transform.rotation.eulerAngles.z);   
-    }
-
-    float ClampAngle(float angle, float min, float max)
-    {
-        if(angle < 90 || angle > 270)
-        {
-            if (angle > 180)
-                angle -= 360;
-            if (max > 180)
-                max -= 360;
-            if (min > 180)
-                min -= 360;
-        }
-        angle = Mathf.Clamp(angle, min, max);
-        if (angle < 0)
-            angle += 360;
-        return angle;
     }
 }
