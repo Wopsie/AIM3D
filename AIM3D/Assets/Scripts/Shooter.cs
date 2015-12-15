@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class Shooter : MonoBehaviour 
 {
-    [SerializeField] private Transform spawnPos;
     [SerializeField]    private GameObject laser;
 
     public enum Shots
@@ -23,6 +22,6 @@ public class Shooter : MonoBehaviour
 
     public void Shoot()
     {
-        var projectile = (GameObject)Instantiate(shooter[shots], spawnPos.position, Quaternion.identity);
+        var projectile = (GameObject)Instantiate(shooter[shots], transform.position, transform.rotation);
     }
 }

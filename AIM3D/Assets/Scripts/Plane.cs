@@ -5,11 +5,6 @@ public class Plane : MonoBehaviour {
 
     private float speed = 90f;
     private int i;
-
-    private float incrementer = 0f;
-
-    private float angleZ;
-
     public Vector3 playerRot;
     
     void Update()
@@ -30,6 +25,8 @@ public class Plane : MonoBehaviour {
 			Debug.Log("Speed UP");
             maxSpeed = 200f;
         }
+
+        
 
         //minimum & maximum speed
         if (speed < 45f)

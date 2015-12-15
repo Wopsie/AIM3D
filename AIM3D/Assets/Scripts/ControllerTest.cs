@@ -7,8 +7,12 @@ public class ControllerTest : MonoBehaviour
 	[SerializeField]    private GameObject bullet;
 	public float speed = 10;
 
-    public Shooter shootClass;
+    private Shooter shootClass;
 
+    void Start()
+    {
+        shootClass = GetComponentInChildren<Shooter>();
+    }
 	// Update is called once per frame
 	void Update () 
     {
@@ -18,8 +22,9 @@ public class ControllerTest : MonoBehaviour
 		//Keycodes are for dev use only!
 		if(rightTrigger > 0.9 || Input.GetKeyDown(KeyCode.M))
 		{
-            Debug.Log("RightTrigger Pressed");
-            GetComponent<Shooter>().Shoot();
+            //Debug.Log("RightTrigger Pressed");
+            
+            shootClass.Shoot();
 			//Shoot
 		}
 		if(leftTrigger > 0 || Input.GetKeyDown(KeyCode.N))
