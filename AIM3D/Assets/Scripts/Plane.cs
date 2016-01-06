@@ -3,9 +3,10 @@ using System.Collections;
 
 public class Plane : MonoBehaviour {
 
-    private float speed = 90f;
+    [HideInInspector]   public float speed = 90f;
     private int i;
-    public Vector3 playerRot;
+    private Vector3 playerRot;
+
     
     void Update()
     {
@@ -22,11 +23,12 @@ public class Plane : MonoBehaviour {
         if (Input.GetKey("space") || Input.GetButton("A"))
         {
             speed++;
-			Debug.Log("Speed UP");
+			//Debug.Log("Speed UP");
             maxSpeed = 200f;
+        }else if(Input.GetButton("B"))
+        {
+            speed--;
         }
-
-        
 
         //minimum & maximum speed
         if (speed < 45f)
@@ -37,8 +39,6 @@ public class Plane : MonoBehaviour {
         {
             speed = maxSpeed;
         }
-
-        //transform.Rotate(Input.GetAxis("Vertical") * 1.5f, 0.0f);
         
         if(Input.GetAxis("Vertical") > 0)
         {
@@ -61,7 +61,6 @@ public class Plane : MonoBehaviour {
             }
         }
 
-        //Debug.Log(transform.rotation.x);
         //rotate plane banking
         if (Input.GetAxis("Horizontal") > 0f)
         {
@@ -100,4 +99,26 @@ public class Plane : MonoBehaviour {
             }
         }
     }
+
+    //DRY OUT CODE
+    
+    //WRITE TURNING FUNCTION
+    //WRITE BANKING FUNCTION
+    //WRITE ASCENDING/DESCENDING FUNCTION
+
+    void BankPlane()
+    {
+
+    }
+
+    void TurnPlane()
+    {
+
+    }
+
+    void Altitude()
+    {
+
+    }
+
 }

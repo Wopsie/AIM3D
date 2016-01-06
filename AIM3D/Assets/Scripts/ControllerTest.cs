@@ -9,12 +9,22 @@ public class ControllerTest : MonoBehaviour
     public float speed = 10;
 
     private Shooter shootClass;
+    private int shootCoolDown;
 
     void Start()
     {
         shootClass = GetComponentInChildren<Shooter>();
     }
-    // Update is called once per frame
+
+    void FixedUpdate()
+    {
+        shootCoolDown--;
+        if (shootCoolDown < 0)
+        {
+            shootCoolDown = 0;
+        }
+    }
+
     void Update()
     {
         float rightTrigger = Input.GetAxis("RightTrigger");
@@ -25,8 +35,12 @@ public class ControllerTest : MonoBehaviour
         {
             //Debug.Log("RightTrigger Pressed");
 
-            shootClass.Shoot();
-            //Shoot
+            if (shootCoolDown == 0)
+            {
+                shootClass.Shoot();
+                shootCoolDown = 10;
+                //Shoot
+            }   
         }
         if (leftTrigger > 0 || Input.GetKeyDown(KeyCode.N))
         {
