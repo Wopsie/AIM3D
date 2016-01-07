@@ -10,7 +10,11 @@ public class TurretRange : MonoBehaviour
     private Plane pSpeed;
     private LaserSight targetDistance;
 
-    public Vector3 targetPos;
+    //public Vector3 targetPos;
+
+    [HideInInspector]   public float targetXPos;
+    [HideInInspector]   public float targetYPos;
+    [HideInInspector]   public float targetZPos;
 
     private float tDist;
 
@@ -25,11 +29,13 @@ public class TurretRange : MonoBehaviour
 	void Update () 
     {
         turretRange = Physics.OverlapSphere(transform.position, 600f, layerMask);
-        Debug.Log("turret range is: " + turretRange);
 
-        targetPos = new Vector3(pSpeed.speed, targetDistance.laserHit.distance, (pSpeed.speed * pSpeed.speed) + (targetDistance.laserHit.distance * targetDistance.laserHit.distance));
+        //targetPos = new Vector3(pSpeed.speed, targetDistance.laserHit.distance, (pSpeed.speed * pSpeed.speed) + (targetDistance.laserHit.distance * targetDistance.laserHit.distance));
 
-        //Debug.Log("target position is: " + targetPos);
+        //get target position & speed
+        targetXPos = pSpeed.speed*pSpeed.speed;
+        targetYPos = targetDistance.laserHit.distance*targetDistance.laserHit.distance;
+        targetZPos = Mathf.Sqrt(targetXPos + targetYPos);
 	}
 
     void OnDrawGizmos()

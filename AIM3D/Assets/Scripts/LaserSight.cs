@@ -18,7 +18,6 @@ public class LaserSight : MonoBehaviour {
             if(laserHit.collider)
             {
                 laser.SetPosition(1, new Vector3(0, 0, laserHit.distance));
-                Debug.Log(laserHit.distance);
             }
         }
         else

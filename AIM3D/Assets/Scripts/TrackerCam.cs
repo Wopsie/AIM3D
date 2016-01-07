@@ -12,5 +12,18 @@ public class TrackerCam : MonoBehaviour {
         float bias = 0.80f;
         Camera.main.transform.position = Camera.main.transform.position * bias + moveCamTo * (1f - bias);
         Camera.main.transform.LookAt(player.position + player.forward * 60f);
+
+        /*
+        if(player == null)
+        {
+            StartCoroutine("MoveBack");
+        }
+
+        IEnumerator MoveBack()
+        {
+
+            yield return null;
+        }
+         * */
 	}
 }

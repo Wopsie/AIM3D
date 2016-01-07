@@ -17,7 +17,6 @@ public class Building : MonoBehaviour {
         if(coll.gameObject.tag == Tags.playerTag)
         {
             pHealth.NullHealth();
-            Debug.Log("collision with building");
         }
     }
 }

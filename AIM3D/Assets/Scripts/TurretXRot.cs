@@ -35,9 +35,14 @@ public class TurretXRot : MonoBehaviour
         if(turretRangeScript.turretRange.Length > 0)
         {
             //rotate to target
+            //this works
             Vector3 targetYPos = new Vector3(target.position.x, target.position.y, target.position.z);
-            //Vector3 targetYPos = turretRangeScript.targetPos;
-            transform.LookAt(targetYPos);
+            //transform.LookAt(targetYPos);
+
+            //this is going to work
+            Vector3 targetPos = new Vector3(Mathf.Sqrt(turretRangeScript.targetXPos), Mathf.Sqrt(turretRangeScript.targetYPos), turretRangeScript.targetZPos);
+            transform.LookAt(targetPos);
+            
 
             //check if target is not too low and if cooldown is zero
             if (shootCoolDown == 0 && targetVisible == true)

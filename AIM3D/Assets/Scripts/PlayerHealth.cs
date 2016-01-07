@@ -6,6 +6,14 @@ public class PlayerHealth : MonoBehaviour
 
     [HideInInspector]   public int health = 10;
 
+    private Explosion explosion;
+
+    void Start()
+    {
+        explosion = GetComponent<Explosion>();
+    }
+
+
     public void DecrHealth()
     {
         //decrease health
@@ -27,7 +35,13 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(health);
         if (health <= 0)
+        {
             Debug.Log("JE BENT HARSTIKKE DOOD");
+            explosion.Death();
+            Destroy(gameObject);
+        }
+            
     }
 }
