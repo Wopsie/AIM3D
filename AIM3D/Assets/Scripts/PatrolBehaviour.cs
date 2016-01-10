@@ -11,13 +11,12 @@ public class PatrolBehaviour : MonoBehaviour {
 	private float mass		=	150;
 
 
-
 	void Start()
 	{
 		movingTo = waypoints[0];
 		waypointIndex = 0;
 
-		if(Vector3.Distance(transform.position, waypoints[0].position) < 0.5)
+		if(Vector3.Distance(transform.position, waypoints[0].position) < 1)
 		{
 			movingTo = waypoints[1];
 			waypointIndex = 1;
@@ -26,9 +25,9 @@ public class PatrolBehaviour : MonoBehaviour {
 
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
-		if(Vector3.Distance(transform.position, movingTo.position) < 0.5)
+		if(Vector3.Distance(transform.position, movingTo.position) < 1)
 		{
 			if(waypointIndex == (waypoints.Length - 1))
 			{
@@ -49,5 +48,15 @@ public class PatrolBehaviour : MonoBehaviour {
 		GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + steeringForce / mass;
 
 		transform.position = Vector3.MoveTowards(transform.position, movingTo.position, Time.deltaTime * speed);
+
+		Vector3 targetDir = movingTo.position - transform.position;
+		float step = speed * Time.deltaTime;
+		Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
+		//.DrawRay(transform.position, newDir, Color.red);
+		transform.rotation = Quaternion.LookRotation(newDir);
+
+		//Vector3 relativePos = movingTo.position - transform.position;
+		//Quaternion rotation = Quaternion.LookRotation(desiredStep);
+		//transform.rotation = rotation;
 	}
 }
