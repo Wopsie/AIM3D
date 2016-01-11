@@ -46,7 +46,6 @@ public class TurretRange : MonoBehaviour
 
 
 
-
     //player speed = pSpeed.speed
     //player distance = targetDistance.laserHit.Distance
 

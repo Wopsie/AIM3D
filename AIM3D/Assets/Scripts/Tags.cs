@@ -10,4 +10,7 @@ public class Tags {
     public const string gBulletTag = "GreenBullet";
     public const string turretTag = "Turret";
     public const string buildingTag = "Building";
+    public const string coreTag = "Core";
+    public const string deathCam = "DeathCam";
+    public const string coreHealthbar = "CoreHealthBar";
 }

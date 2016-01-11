@@ -6,7 +6,7 @@ public class ControllerTest : MonoBehaviour
 {
     [SerializeField]
     private GameObject bullet;
-    public float speed = 10;
+    [HideInInspector]   public float speed = 10;
 
     private Shooter shootClass;
     private int shootCoolDown;

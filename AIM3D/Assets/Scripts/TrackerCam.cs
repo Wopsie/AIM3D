@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TrackerCam : MonoBehaviour {
-
+public class TrackerCam : MonoBehaviour 
+{
     [SerializeField]    private Transform player;
 	
 	void FixedUpdate () 
@@ -13,17 +13,6 @@ public class TrackerCam : MonoBehaviour {
         Camera.main.transform.position = Camera.main.transform.position * bias + moveCamTo * (1f - bias);
         Camera.main.transform.LookAt(player.position + player.forward * 60f);
 
-        /*
-        if(player == null)
-        {
-            StartCoroutine("MoveBack");
-        }
-
-        IEnumerator MoveBack()
-        {
-
-            yield return null;
-        }
-         * */
-	}
+        Debug.Log(player);
+	} 
 }

@@ -9,15 +9,15 @@ public class Bullet : MonoBehaviour
 	public float Speed{get{return speed;}set{speed = value;}}
     private PlayerHealth pHealth;
     private GameObject player;
-
-    [SerializeField]    private AudioSource laserSound;
+    private GameObject core;
+    private CoreScript coreHealth;
 
 	void Start () 
     {
+        core = GameObject.FindWithTag(Tags.coreTag);
+        coreHealth = core.GetComponent<CoreScript>();
         player = GameObject.FindWithTag(Tags.playerTag);
         pHealth = player.GetComponent<PlayerHealth>();
-
-        //laserSound.Play();
 	}
 	
 	void Update () {
@@ -32,14 +32,19 @@ public class Bullet : MonoBehaviour
         {
             if (coll.gameObject.tag == Tags.planeTag)
             {
-                //Debug.Log("collision with player");
                 pHealth.DecrHealth();
                 Destroy(gameObject);
             }
             else
             {
-                //Debug.Log("fuck if i know");
                 Destroy(gameObject);
+            }
+        }else if(gameObject.tag == Tags.bBulletTag)
+        {
+            if(coll.gameObject.tag == Tags.coreTag)
+            {
+                Debug.Log("CORE HIT");
+                coreHealth.DecreaseHealth();
             }
         }
         

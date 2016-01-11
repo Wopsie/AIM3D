@@ -20,5 +20,4 @@ public class Explosion : MonoBehaviour
         Debug.Log("explode");
         yield return new WaitForSeconds(5f);
     }
-    
 }

@@ -7,10 +7,14 @@ public class PlayerHealth : MonoBehaviour
     [HideInInspector]   public int health = 10;
 
     private Explosion explosion;
+    private DeathCamera dCam;
+    private GameObject dCamera;
 
     void Start()
     {
         explosion = GetComponent<Explosion>();
+        dCamera = GameObject.FindWithTag(Tags.deathCam);
+        dCam = dCamera.GetComponent<DeathCamera>();
     }
 
 
@@ -40,8 +44,8 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("JE BENT HARSTIKKE DOOD");
             explosion.Death();
+            //dCam.MoveCamBack();
             Destroy(gameObject);
-        }
-            
+        }       
     }
 }
