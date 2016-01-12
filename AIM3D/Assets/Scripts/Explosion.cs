@@ -18,6 +18,7 @@ public class Explosion : MonoBehaviour
         Instantiate(explosion, transform.position, Quaternion.identity);
         explosionSound.Play();
         Debug.Log("explode");
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject);
     }
 }

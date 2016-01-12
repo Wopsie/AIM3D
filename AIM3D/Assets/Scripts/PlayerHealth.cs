@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     private Explosion explosion;
     private DeathCamera dCam;
     private GameObject dCamera;
+    private GameObject respawn;
 
     void Start()
     {
@@ -29,22 +30,29 @@ public class PlayerHealth : MonoBehaviour
     {
         //increase health 
         health += 5;
+        Debug.Log("heal");
     }
 
     public void NullHealth()
     {
         health -= health;
-        Debug.Log("GET DUNKED ON!");
+    }
+    
+    public void FullHealth()
+    {
+        health += 20;
+        Debug.Log("FULL HEALTH");
     }
 
     void Update()
     {
-        Debug.Log(health);
+        Debug.Log("player health is ... " + health);
         if (health <= 0)
         {
             Debug.Log("JE BENT HARSTIKKE DOOD");
             explosion.Death();
-            //dCam.MoveCamBack();
+            //Camera.main.enabled = false;
+            dCam.MoveCamBack();
             Destroy(gameObject);
         }       
     }

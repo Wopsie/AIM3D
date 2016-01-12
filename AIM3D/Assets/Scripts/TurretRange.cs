@@ -7,14 +7,20 @@ public class TurretRange : MonoBehaviour
     private int layerMask;
     [HideInInspector]   public Collider[] turretRange;
     private GameObject player;
-    private Plane pSpeed;
+    private Plane playerData;
     private LaserSight targetDistance;
+    private Vector3 pRotation;
+    private float playerPos;
+
+    public Vector3 predictedPosition;
+    private float posChange;
 
     //public Vector3 targetPos;
 
     [HideInInspector]   public float targetXPos;
     [HideInInspector]   public float targetYPos;
     [HideInInspector]   public float targetZPos;
+    [HideInInspector]   public float travelTime;
 
     private float tDist;
 
@@ -23,19 +29,31 @@ public class TurretRange : MonoBehaviour
         layerMask = LayerMask.GetMask("Player");
         targetDistance = GetComponentInChildren<LaserSight>();
         player = GameObject.FindWithTag(Tags.playerTag);
-        pSpeed = player.GetComponent<Plane>();
+        playerData = player.GetComponent<Plane>();
     }
 	
 	void Update () 
     {
         turretRange = Physics.OverlapSphere(transform.position, 600f, layerMask);
 
+        
         //targetPos = new Vector3(pSpeed.speed, targetDistance.laserHit.distance, (pSpeed.speed * pSpeed.speed) + (targetDistance.laserHit.distance * targetDistance.laserHit.distance));
 
         //get target position & speed
-        targetXPos = pSpeed.speed*pSpeed.speed;
+        targetXPos = playerData.speed * playerData.speed;
         targetYPos = targetDistance.laserHit.distance*targetDistance.laserHit.distance;
         targetZPos = Mathf.Sqrt(targetXPos + targetYPos);
+
+        travelTime = (Vector3.Distance(transform.position, player.transform.position) / 600f);
+
+        pRotation = playerData.playerRot;
+
+        playerPos = player.transform.position.sqrMagnitude;
+
+        posChange = playerPos * travelTime;
+
+        predictedPosition = pRotation * travelTime + player.transform.position;
+        
 	}
 
     void OnDrawGizmos()

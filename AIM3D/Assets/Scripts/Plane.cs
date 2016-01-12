@@ -5,8 +5,7 @@ public class Plane : MonoBehaviour {
 
     [HideInInspector]   public float speed = 90f;
     private int i;
-    private Vector3 playerRot;
-
+    public Vector3 playerRot;
     
     void Update()
     {

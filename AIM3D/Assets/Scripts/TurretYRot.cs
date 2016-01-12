@@ -28,7 +28,7 @@ public class TurretYRot : MonoBehaviour
             //transform.LookAt(targetYPos);
 
             //this is going to work
-            Vector3 targetPos = new Vector3(Mathf.Sqrt(turretrangeScript.targetXPos), transform.position.y, turretrangeScript.targetZPos);
+            Vector3 targetPos = new Vector3(Mathf.Sqrt(turretrangeScript.targetXPos), transform.position.y, turretrangeScript.targetZPos) + targetYPos;
             transform.LookAt(targetPos);
             
         }else

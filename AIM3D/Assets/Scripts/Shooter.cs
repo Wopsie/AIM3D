@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Shooter : MonoBehaviour 
 {
-    [SerializeField]    private GameObject laser;
+    public GameObject laser;
 
     public enum Shots
     {

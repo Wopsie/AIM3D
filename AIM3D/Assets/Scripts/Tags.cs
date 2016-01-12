@@ -13,4 +13,5 @@ public class Tags {
     public const string coreTag = "Core";
     public const string deathCam = "DeathCam";
     public const string coreHealthbar = "CoreHealthBar";
+    public const string respawnTag = "Respawn";
 }

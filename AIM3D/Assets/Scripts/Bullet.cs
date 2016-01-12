@@ -46,7 +46,6 @@ public class Bullet : MonoBehaviour
                 Debug.Log("CORE HIT");
                 coreHealth.DecreaseHealth();
             }
-        }
-        
+        } 
     }
 }

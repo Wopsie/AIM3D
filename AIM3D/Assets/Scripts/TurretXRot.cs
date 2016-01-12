@@ -13,8 +13,13 @@ public class TurretXRot : MonoBehaviour
     private GameObject turret;
     private bool targetVisible;
 
+    private Lines line;
+    private GameObject lines;
+
     void Start()
     {
+        line = GetComponent<Lines>();
+        lines = GetComponent<Lines>().makeLine(Vector3.up, Color.red);
         turret = GameObject.FindWithTag(Tags.turretTag);
         shootClass = GetComponentInChildren<Shooter>();
         turretRangeScript = turret.GetComponent<TurretRange>();
@@ -31,6 +36,7 @@ public class TurretXRot : MonoBehaviour
 
     void Update()
     {
+        
         //if object is within range
         if(turretRangeScript.turretRange.Length > 0)
         {
@@ -40,9 +46,11 @@ public class TurretXRot : MonoBehaviour
             //transform.LookAt(targetYPos);
 
             //this is going to work
-            Vector3 targetPos = new Vector3(Mathf.Sqrt(turretRangeScript.targetXPos), Mathf.Sqrt(turretRangeScript.targetYPos), turretRangeScript.targetZPos);
+            Vector3 targetPos = new Vector3(Mathf.Sqrt(turretRangeScript.targetXPos), Mathf.Sqrt(turretRangeScript.targetYPos), turretRangeScript.targetZPos) + targetYPos;
             transform.LookAt(targetPos);
-            
+
+
+            line.drawLineTo(lines,transform.position, turretRangeScript.predictedPosition);
 
             //check if target is not too low and if cooldown is zero
             if (shootCoolDown == 0 && targetVisible == true)
