@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PatrolBehaviour : MonoBehaviour {
+public class AI : MonoBehaviour {
 
 	public enum State
 	{
@@ -15,15 +15,27 @@ public class PatrolBehaviour : MonoBehaviour {
 	public Transform[] waypoints;
 	public Transform movingTo;
 	public float speed;
+	public float rotationSpeed = 2;
 	public float maxSpeed;
 	public int waypointIndex;
-	private float mass		=	150;
+	private float mass =	150;
+
+	private float chaseDistance;
+	private float attackDistance;
 
 
 	void Start()
 	{
+		alive = true;
 		StartCoroutine("FSM");
-		Patrol();
+		movingTo = waypoints[0];
+		waypointIndex = 0;
+		
+		if(Vector3.Distance(transform.position, waypoints[0].position) < 1)
+		{
+			movingTo = waypoints[1];
+			waypointIndex = 1;
+		}
 	}
 
 	IEnumerator FSM()
@@ -45,15 +57,6 @@ public class PatrolBehaviour : MonoBehaviour {
 
 	void Patrol()
 	{
-		movingTo = waypoints[0];
-		waypointIndex = 0;
-		
-		if(Vector3.Distance(transform.position, waypoints[0].position) < 1)
-		{
-			movingTo = waypoints[1];
-			waypointIndex = 1;
-		}
-
 		if(Vector3.Distance(transform.position, movingTo.position) < 1)
 		{
 			if(waypointIndex == (waypoints.Length - 1))
@@ -74,11 +77,19 @@ public class PatrolBehaviour : MonoBehaviour {
 
 	void Chase()
 	{
-		Debug.Log("CHASE!");
+		//Als de player binnen range komt achtervolg
+	}
+
+	void Attack()
+	{
+		//Als de player in range komt begin met schieten
 	}
 
 	void Update()
 	{
+
+		Patrol();
+
 		Vector3 desiredStep	= movingTo.position - GetComponent<Rigidbody>().position;
 		desiredStep.Normalize();
 		Vector3 desiredVelocity	= desiredStep	*	maxSpeed;
@@ -87,7 +98,7 @@ public class PatrolBehaviour : MonoBehaviour {
 
 
 		Vector3 targetDir = movingTo.position - transform.position;
-		float step = speed * Time.deltaTime;
+		float step = rotationSpeed * Time.deltaTime;
 		Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
 		transform.rotation = Quaternion.LookRotation(newDir);
 	}
