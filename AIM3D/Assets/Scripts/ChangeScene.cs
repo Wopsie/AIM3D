@@ -7,4 +7,10 @@ public class ChangeScene : MonoBehaviour {
 	{
 		Application.LoadLevel (sceneToChangeTo);
 	}
+
+	public void Quit()
+	{
+		Application.Quit();
+		Debug.Log("Quit game");
+	}
 }

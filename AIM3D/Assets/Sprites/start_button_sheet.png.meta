@@ -1,0 +1,671 @@
+fileFormatVersion: 2
+guid: 9e750e00cb663488a9eceac90708a7d1
+timeCreated: 1452690822
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: start_button_sheet_0
+    21300002: start_button_sheet_1
+    21300004: start_button_sheet_2
+    21300006: start_button_sheet_3
+    21300008: start_button_sheet_4
+    21300010: start_button_sheet_5
+    21300012: start_button_sheet_6
+    21300014: start_button_sheet_7
+    21300016: start_button_sheet_8
+    21300018: start_button_sheet_9
+    21300020: start_button_sheet_10
+    21300022: start_button_sheet_11
+    21300024: start_button_sheet_12
+    21300026: start_button_sheet_13
+    21300028: start_button_sheet_14
+    21300030: start_button_sheet_15
+    21300032: start_button_sheet_16
+    21300034: start_button_sheet_17
+    21300036: start_button_sheet_18
+    21300038: start_button_sheet_19
+    21300040: start_button_sheet_20
+    21300042: start_button_sheet_21
+    21300044: start_button_sheet_22
+    21300046: start_button_sheet_23
+    21300048: start_button_sheet_24
+    21300050: start_button_sheet_25
+    21300052: start_button_sheet_26
+    21300054: start_button_sheet_27
+    21300056: start_button_sheet_28
+    21300058: start_button_sheet_29
+    21300060: start_button_sheet_30
+    21300062: start_button_sheet_31
+    21300064: start_button_sheet_32
+    21300066: start_button_sheet_33
+    21300068: start_button_sheet_34
+    21300070: start_button_sheet_35
+    21300072: start_button_sheet_36
+    21300074: start_button_sheet_37
+    21300076: start_button_sheet_38
+    21300078: start_button_sheet_39
+    21300080: start_button_sheet_40
+    21300082: start_button_sheet_41
+    21300084: start_button_sheet_42
+    21300086: start_button_sheet_43
+    21300088: start_button_sheet_44
+    21300090: start_button_sheet_45
+    21300092: start_button_sheet_46
+    21300094: start_button_sheet_47
+    21300096: start_button_sheet_48
+    21300098: start_button_sheet_49
+    21300100: start_button_sheet_50
+    21300102: start_button_sheet_51
+    21300104: start_button_sheet_52
+    21300106: start_button_sheet_53
+    21300108: start_button_sheet_54
+    21300110: start_button_sheet_55
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: start_button_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 4562
+        width: 348
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 4562
+        width: 354
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 4562
+        width: 357
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 4562
+        width: 357
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 4562
+        width: 355
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 4562
+        width: 350
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 4562
+        width: 347
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 4032
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 4032
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 4032
+        width: 344
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 4032
+        width: 345
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 4032
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 4032
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 4032
+        width: 343
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 3502
+        width: 343
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 3502
+        width: 343
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 3502
+        width: 344
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 3502
+        width: 345
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 3502
+        width: 343
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 3502
+        width: 343
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 3502
+        width: 343
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 2973
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 2973
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 2973
+        width: 344
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 2973
+        width: 345
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 2973
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 2973
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 3271
+        y: 2973
+        width: 345
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 2443
+        width: 349
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 2443
+        width: 353
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 2443
+        width: 354
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 2443
+        width: 356
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 2204
+        y: 2443
+        width: 352
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 2737
+        y: 2443
+        width: 349
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 2443
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1912
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1912
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1912
+        width: 344
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 1912
+        width: 345
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 1912
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 1912
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 1911
+        width: 343
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1376
+        width: 343
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1372
+        width: 343
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1371
+        width: 344
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 1371
+        width: 345
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 1374
+        width: 344
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 1376
+        width: 343
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 1382
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 851
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 851
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 851
+        width: 344
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 851
+        width: 345
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 851
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 851
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: start_button_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 851
+        width: 345
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

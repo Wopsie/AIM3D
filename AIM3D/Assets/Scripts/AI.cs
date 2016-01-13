@@ -10,6 +10,9 @@ public class AI : MonoBehaviour {
 	}
 	public State state;
 
+	private int layerMask;
+	[HideInInspector]public Collider[] enemyRange;
+
 	[SerializeField] private bool alive;
 
 	public Transform[] waypoints;
@@ -20,12 +23,10 @@ public class AI : MonoBehaviour {
 	public int waypointIndex;
 	private float mass =	150;
 
-	private float chaseDistance;
-	private float attackDistance;
-
-
 	void Start()
 	{
+		layerMask = LayerMask.GetMask("Player");
+
 		alive = true;
 		StartCoroutine("FSM");
 		movingTo = waypoints[0];
@@ -78,8 +79,9 @@ public class AI : MonoBehaviour {
 	void Chase()
 	{
 		//Als de player binnen range komt achtervolg
-	}
 
+	}
+	
 	void Attack()
 	{
 		//Als de player in range komt begin met schieten
@@ -87,6 +89,9 @@ public class AI : MonoBehaviour {
 
 	void Update()
 	{
+		enemyRange = Physics.OverlapSphere(transform.position, 200f, layerMask);
+		Debug.Log(enemyRange);
+
 
 		Patrol();
 
@@ -101,6 +106,12 @@ public class AI : MonoBehaviour {
 		float step = rotationSpeed * Time.deltaTime;
 		Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
 		transform.rotation = Quaternion.LookRotation(newDir);
+	}
+
+	void OnDrawGizmos()
+	{
+		Gizmos.color = Color.magenta;
+		Gizmos.DrawWireSphere(transform.position, 200f);
 	}
 }
 
