@@ -8,6 +8,7 @@ public class TrackerCam : MonoBehaviour
     void Start()
     {
         Plane.OnRenable += RefindPlayer;
+        RefindPlayer();
     }
 
 	void FixedUpdate () 

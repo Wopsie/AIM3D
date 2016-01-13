@@ -13,6 +13,8 @@ public class DeathCamera : MonoBehaviour {
     void Start()
     {
         Plane.OnRenable += RefindPlayer;
+
+        RefindPlayer();
         spawnPoint = GameObject.FindWithTag(Tags.respawnTag);
         respawn = spawnPoint.GetComponent<RespawnScript>();
         deathCamera = GetComponent<Camera>();

@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     private Explosion explosion;
     private DeathCamera dCam;
     private HealthBar pHealthBarScript;
+    private CameraShake camShake;
     private GameObject dCamera;
     private GameObject respawn;
     private GameObject pHealthBar;
@@ -23,6 +24,8 @@ public class PlayerHealth : MonoBehaviour
 
         dCamera = GameObject.FindWithTag(Tags.deathCam);
         dCam = dCamera.GetComponent<DeathCamera>();
+
+        camShake = Camera.main.GetComponent<CameraShake>();
     }
 
 
@@ -31,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
         //decrease health
         health -= 5;
         pHealthBarScript.DecreaseScale();
+        camShake.Shake();
     }
 
     public void NullHealth()
