@@ -56,6 +56,7 @@ public class RespawnScript : MonoBehaviour {
         else
         {
             //deathsceen
+			Application.LoadLevel ("LoseScene");
             Debug.Log("Mission Failed");
         }
         
