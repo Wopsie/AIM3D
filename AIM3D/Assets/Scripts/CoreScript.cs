@@ -33,7 +33,7 @@ public class CoreScript : MonoBehaviour {
         {
             yield return null;
         }
-            
+		Application.LoadLevel("WinScreen");    
         Debug.Log("WINSCREEN");
         yield return new WaitForSeconds(0f);
     }
