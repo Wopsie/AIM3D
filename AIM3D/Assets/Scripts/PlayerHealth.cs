@@ -4,16 +4,23 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour 
 {
 
-    [HideInInspector]   public int health = 10;
+    [HideInInspector]   private int health = 25;
 
     private Explosion explosion;
     private DeathCamera dCam;
+    private HealthBar pHealthBarScript;
     private GameObject dCamera;
     private GameObject respawn;
+    private GameObject pHealthBar;
+    
 
     void Start()
     {
+        pHealthBar = GameObject.FindWithTag(Tags.playerHealthbar);
+        pHealthBarScript = pHealthBar.GetComponent<HealthBar>();
+
         explosion = GetComponent<Explosion>();
+
         dCamera = GameObject.FindWithTag(Tags.deathCam);
         dCam = dCamera.GetComponent<DeathCamera>();
     }
@@ -23,14 +30,7 @@ public class PlayerHealth : MonoBehaviour
     {
         //decrease health
         health -= 5;
-        Debug.Log(health);
-    }
-
-    public void IncrHealth()
-    {
-        //increase health 
-        health += 5;
-        Debug.Log("heal");
+        pHealthBarScript.DecreaseScale();
     }
 
     public void NullHealth()
@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
     
     public void FullHealth()
     {
-        health += 20;
+        health += 25;
         Debug.Log("FULL HEALTH");
     }
 

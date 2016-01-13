@@ -6,27 +6,39 @@ public class Bullet : MonoBehaviour
 {	
 	[SerializeField]    private float bulletDamage;
 	private float speed = 600;
-	public float Speed{get{return speed;}set{speed = value;}}
     private PlayerHealth pHealth;
     private GameObject player;
     private GameObject core;
+    private GameObject turret;
     private CoreScript coreHealth;
+    private TurretRange turretRangeScript;
+
 
 	void Start () 
     {
+        turret = GameObject.FindWithTag(Tags.turretTag);
         core = GameObject.FindWithTag(Tags.coreTag);
-        coreHealth = core.GetComponent<CoreScript>();
         player = GameObject.FindWithTag(Tags.playerTag);
+        coreHealth = core.GetComponent<CoreScript>();
         pHealth = player.GetComponent<PlayerHealth>();
+        turretRangeScript = turret.GetComponent<TurretRange>();
 	}
 	
 	void Update () {
         //move bullet
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        Destroy(gameObject, 4f);
 	}
+
+    
 
     void OnTriggerEnter(Collider coll)
     {
+        if(coll.gameObject.tag == Tags.buildingTag || coll.gameObject.tag == Tags.asteroidTag)
+        {
+            Destroy(gameObject);
+            Debug.Log("collision with building/asteroid");
+        }
         //check if current bullet is red
         if(gameObject.tag == Tags.rBulletTag)
         {
@@ -34,6 +46,7 @@ public class Bullet : MonoBehaviour
             {
                 pHealth.DecrHealth();
                 Destroy(gameObject);
+                Debug.Log("Destroyed on player collision");
             }
             else
             {
@@ -45,6 +58,9 @@ public class Bullet : MonoBehaviour
             {
                 Debug.Log("CORE HIT");
                 coreHealth.DecreaseHealth();
+            }else if(coll.gameObject.tag == Tags.turretTag)
+            {
+                Debug.Log("destroy turret?");
             }
         } 
     }

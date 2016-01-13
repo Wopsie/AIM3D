@@ -6,29 +6,26 @@ public class TurretYRot : MonoBehaviour
     //LOOK AT PLAYER LEFT & RIGHT
     //Turret Base
 
-    [SerializeField]    private Transform target;
-
+    private Transform target;
     private GameObject turret;
-
     private TurretRange turretrangeScript;
 
     void Start()
     {
         turret = GameObject.FindWithTag(Tags.turretTag);
-        turretrangeScript = turret.GetComponent<TurretRange>();  
+        turretrangeScript = transform.parent.GetComponent<TurretRange>();
+        target = turretrangeScript.turretRange[0].transform;
     }
 
 	void Update () 
     {
+
+        
+
         //rotate to target over X & Z axis
         if(turretrangeScript.turretRange.Length > 0)
         {
-            //this works
-            Vector3 targetYPos = new Vector3(target.position.x, transform.position.y, target.position.z);
-            //transform.LookAt(targetYPos);
-
-            //this is going to work
-            Vector3 targetPos = new Vector3(Mathf.Sqrt(turretrangeScript.targetXPos), transform.position.y, turretrangeScript.targetZPos) + targetYPos;
+            Vector3 targetPos = new Vector3(turretrangeScript.predictedPosition.x, transform.position.y, turretrangeScript.predictedPosition.z);
             transform.LookAt(targetPos);
             
         }else

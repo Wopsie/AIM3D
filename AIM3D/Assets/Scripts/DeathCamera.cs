@@ -5,25 +5,30 @@ public class DeathCamera : MonoBehaviour {
 
     private float camSpeed = 50f;
     private Camera deathCamera;
-    private GameObject player;
+    private Transform player;
     private GameObject spawnPoint;
     private RespawnScript respawn;
     private float timer;
 
-    void OnEnable()
+    void Start()
     {
+        Plane.OnRenable += RefindPlayer;
         spawnPoint = GameObject.FindWithTag(Tags.respawnTag);
         respawn = spawnPoint.GetComponent<RespawnScript>();
-        player = GameObject.FindWithTag(Tags.playerTag);
         deathCamera = GetComponent<Camera>();
+    }
+
+    void OnDisable()
+    {
+        Plane.OnRenable -= RefindPlayer;
     }
 
     void Update()
     {
         if(player != null)
         {
-            transform.position = player.transform.position;
-            transform.rotation = player.transform.rotation;
+            transform.position = player.position;
+            transform.rotation = player.rotation;
         }
     }
 
@@ -45,5 +50,11 @@ public class DeathCamera : MonoBehaviour {
         //respawn
         respawn.Respawn();
         yield return new WaitForSeconds(0f);
+    }
+
+    public void RefindPlayer()
+    {
+        player = GameObject.FindWithTag(Tags.playerTag).transform;
+        Debug.Log(gameObject.tag + "found player");
     }
 }

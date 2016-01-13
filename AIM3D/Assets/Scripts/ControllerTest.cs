@@ -49,7 +49,7 @@ public class ControllerTest : MonoBehaviour
         }
         if (rightTrigger == 0 && leftTrigger == 0)
         {
-            Debug.Log("<color=red>Nothing is Pressed</color>");
+            //Debug.Log("<color=red>Nothing is Pressed</color>");
             //No triggers pressed
         }
         else if (rightTrigger > 0 && leftTrigger > 0)

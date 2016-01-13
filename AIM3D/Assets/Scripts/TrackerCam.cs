@@ -7,7 +7,7 @@ public class TrackerCam : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindWithTag(Tags.playerTag);
+        Plane.OnRenable += RefindPlayer;
     }
 
 	void FixedUpdate () 
@@ -15,7 +15,7 @@ public class TrackerCam : MonoBehaviour
         if(player != null)
         {
             //track player with camera
-            Vector3 moveCamTo = player.transform.position - player.transform.forward * 10f + Vector3.up * 5f;
+            Vector3 moveCamTo = player.transform.position - player.transform.forward * 10f + Vector3.up * 7f;
             float bias = 0.80f;
             Camera.main.transform.position = Camera.main.transform.position * bias + moveCamTo * (1f - bias);
             Camera.main.transform.LookAt(player.transform.position + player.transform.forward * 60f);
@@ -23,9 +23,14 @@ public class TrackerCam : MonoBehaviour
         
 	}
 
+    void OnDisable()
+    {
+        Plane.OnRenable -= RefindPlayer;
+    }
+
     public void RefindPlayer()
     {
         player = GameObject.FindWithTag(Tags.playerTag);
-        Debug.Log(player + "found player");
+        Debug.Log(gameObject.tag + "found player");
     }
 }

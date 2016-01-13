@@ -5,12 +5,17 @@ public class RespawnScript : MonoBehaviour {
 
     [SerializeField]    private GameObject player;
     private GameObject deathCamera;
+    private GameObject tracker;
+    private GameObject building;
+    private GameObject turret;
     private Camera deathCam;
+    private Camera trackerCam;
     private int lives = 3;
     private PlayerHealth pHealth;
-    private GameObject tracker;
-    private Camera trackerCam;
     private TrackerCam trackerScript;
+    private Building buildingScript;
+    private TurretRange turretScript;
+    private DeathCamera deathCamScript;
 
     void Start()
     {
@@ -20,7 +25,15 @@ public class RespawnScript : MonoBehaviour {
 
         deathCamera = GameObject.FindWithTag(Tags.deathCam);
         deathCam = deathCamera.GetComponent<Camera>();
+        deathCamScript = deathCamera.GetComponent<DeathCamera>();
+
         pHealth = player.GetComponent<PlayerHealth>();
+
+        building = GameObject.FindWithTag(Tags.buildingTag);
+        buildingScript = building.GetComponent<Building>();
+
+        turret = GameObject.FindWithTag(Tags.turretTag);
+        turretScript = turret.GetComponent<TurretRange>();
     }
 
     public void Respawn()
@@ -35,6 +48,8 @@ public class RespawnScript : MonoBehaviour {
             deathCam.enabled = false;
             Camera.main.enabled = true;
             trackerScript.RefindPlayer();
+            //turret
+            //building
             lives--;
             Debug.Log(lives + " lives left");
         }

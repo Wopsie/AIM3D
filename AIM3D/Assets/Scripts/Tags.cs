@@ -13,5 +13,7 @@ public class Tags {
     public const string coreTag = "Core";
     public const string deathCam = "DeathCam";
     public const string coreHealthbar = "CoreHealthBar";
+    public const string playerHealthbar = "PlayerHealthBar";
     public const string respawnTag = "Respawn";
+    public const string asteroidTag = "Asteroid";
 }

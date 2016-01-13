@@ -3,17 +3,38 @@ using System.Collections;
 
 public class Plane : MonoBehaviour {
 
+    //delegate void ThisPlayer(GameObject activePlayer);
+    //ThisPlayer thisPlayer;
+
     [HideInInspector]   public float speed = 90f;
-    private int i;
-    public Vector3 playerRot;
-    
+    [HideInInspector]   public Vector3 playerRot;
+    [HideInInspector]   public Vector3 movementVector = Vector3.zero;
+    private Vector3 oldVector = Vector3.zero;
+    public delegate void ResetPlayer();
+    public static event ResetPlayer OnRenable;
+    private HealthBar pHealthBarScript;
+    private GameObject pHealthBar;
+
+    void Start()
+    {
+        pHealthBar = GameObject.FindWithTag(Tags.playerHealthbar);
+        pHealthBarScript = pHealthBar.GetComponent<HealthBar>();
+        pHealthBarScript.ResetScale();
+
+        if (OnRenable != null)
+            OnRenable();
+    }
+
     void Update()
     {
         playerRot = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
     }
     
+    //inputs in fixed update eigenlijk heel slecht... Noted
     void FixedUpdate()
     {
+        oldVector = this.transform.position;
+
         transform.position += transform.forward * Time.deltaTime * speed;
 
         speed -= transform.forward.y * Time.deltaTime * 50f;
@@ -42,7 +63,7 @@ public class Plane : MonoBehaviour {
         if(Input.GetAxis("Vertical") > 0)
         {
             //go up
-            transform.Rotate(new Vector3(1.5f, 0f, 0f), Space.Self);
+            transform.Rotate(new Vector3(1.1f, 0f, 0f), Space.Self);
 
             if (transform.rotation.eulerAngles.z > 80 && transform.rotation.eulerAngles.z < 82)
             {
@@ -52,7 +73,7 @@ public class Plane : MonoBehaviour {
         else if(Input.GetAxis("Vertical") < 0)
         {
             //go down
-            transform.Rotate(new Vector3(-1.5f, 0, 0), Space.Self);
+            transform.Rotate(new Vector3(-1.1f, 0, 0), Space.Self);
 
             if (transform.rotation.eulerAngles.z > 80 && transform.rotation.eulerAngles.z < 90)
             {
@@ -64,8 +85,8 @@ public class Plane : MonoBehaviour {
         if (Input.GetAxis("Horizontal") > 0f)
         {
             //bank & turn right
-            transform.Rotate(new Vector3(0, 2, 0), Space.World);
-            transform.Rotate(new Vector3(0f, 0f, -2.8f), Space.Self);
+            transform.Rotate(new Vector3(0, 1.5f, 0), Space.World);
+            transform.Rotate(new Vector3(0f, 0f, -2.5f), Space.Self);
 
             if(transform.rotation.eulerAngles.z > 180 && transform.rotation.eulerAngles.z < 280)
             {
@@ -75,8 +96,8 @@ public class Plane : MonoBehaviour {
         else if (Input.GetAxis("Horizontal") < 0f)
         {
             //bank & turn left
-            transform.Rotate(new Vector3(0, -2, 0), Space.World);
-            transform.Rotate(new Vector3(0f, 0f, 2.8f), Space.Self);
+            transform.Rotate(new Vector3(0, -1.5f, 0), Space.World);
+            transform.Rotate(new Vector3(0f, 0f, 2.5f), Space.Self);
 
             if (transform.rotation.eulerAngles.z > 80 && transform.rotation.eulerAngles.z < 180)
             {
@@ -97,6 +118,8 @@ public class Plane : MonoBehaviour {
                 transform.Rotate(new Vector3(0, 0, -2) * 2, Space.Self);
             }
         }
+
+        movementVector = this.transform.position - oldVector;
     }
 
     //DRY OUT CODE
