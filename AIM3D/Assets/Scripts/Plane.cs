@@ -10,8 +10,11 @@ public class Plane : MonoBehaviour {
     [HideInInspector]   public Vector3 playerRot;
     [HideInInspector]   public Vector3 movementVector = Vector3.zero;
     private Vector3 oldVector = Vector3.zero;
+
+    //create event to send out to objects interacting with player
     public delegate void ResetPlayer();
     public static event ResetPlayer OnRenable;
+
     private PlayerHealthbar pHealthBarScript;
     private GameObject pHealthBar;
 
@@ -21,6 +24,7 @@ public class Plane : MonoBehaviour {
         pHealthBarScript = pHealthBar.GetComponent<PlayerHealthbar>();
         pHealthBarScript.ResetScale();
 
+        //send out event to
         if (OnRenable != null)
             OnRenable();
     }

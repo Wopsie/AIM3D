@@ -16,6 +16,7 @@ public class ControllerTest : MonoBehaviour
         shootClass = GetComponentInChildren<Shooter>();
     }
 
+    //reduce cooldown for shooting untill zero
     void FixedUpdate()
     {
         shootCoolDown--;
@@ -33,8 +34,6 @@ public class ControllerTest : MonoBehaviour
         //Keycodes are for dev use only!
         if (rightTrigger > 0.9 || Input.GetKeyDown(KeyCode.M))
         {
-            //Debug.Log("RightTrigger Pressed");
-
             if (shootCoolDown == 0)
             {
                 shootClass.Shoot();
@@ -42,19 +41,11 @@ public class ControllerTest : MonoBehaviour
                 //Shoot
             }   
         }
+        //check left trigger
         if (leftTrigger > 0 || Input.GetKeyDown(KeyCode.N))
         {
             Debug.Log("LeftTrigger Pressed");
             //Aim??
-        }
-        if (rightTrigger == 0 && leftTrigger == 0)
-        {
-            //Debug.Log("<color=red>Nothing is Pressed</color>");
-            //No triggers pressed
-        }
-        else if (rightTrigger > 0 && leftTrigger > 0)
-        {
-            //Debug.Log("Both are pressed");
         }
     }
 }

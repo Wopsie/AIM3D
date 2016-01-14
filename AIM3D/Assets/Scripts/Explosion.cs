@@ -10,6 +10,7 @@ public class Explosion : MonoBehaviour
 
     void Start()
     {
+        //get audiosource and camera
         mainCam = GameObject.FindWithTag("MainCamera");
         explosionSound = mainCam.GetComponent<AudioSource>();
     }
@@ -19,7 +20,7 @@ public class Explosion : MonoBehaviour
         StartCoroutine("DeathEvent");
     }
 
-    
+    //instantiate explosion, play explosion sound
     IEnumerator DeathEvent()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);

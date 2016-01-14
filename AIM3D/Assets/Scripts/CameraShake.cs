@@ -5,16 +5,8 @@ public class CameraShake : MonoBehaviour {
 
     private float shakePower = 0.7f;
     private float duration = 0.5f;
-    //private Vector3 initialPos;
     private bool isShaking = false;
-
-	// Use this for initialization
-	void Start () 
-    {
-        //initialPos = transform.localPosition;
-	}
 	
-	// Update is called once per frame
 	void Update () 
     {
         if(isShaking)
@@ -23,6 +15,7 @@ public class CameraShake : MonoBehaviour {
         }
 	}
 
+    //allow camera shaking
     public void Shake()
     {
         isShaking = true;
@@ -30,6 +23,7 @@ public class CameraShake : MonoBehaviour {
         Invoke("StopShaking", duration);
     }
 
+    //disallow camera shaking
     public void StopShaking()
     {
         isShaking = false;

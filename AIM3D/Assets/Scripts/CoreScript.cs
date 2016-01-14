@@ -17,6 +17,7 @@ public class CoreScript : MonoBehaviour {
 
     void Update()
     {
+        //if core health is zero destroy core
         if(coreHealth <= 0)
         {
             Debug.Log("DESTROYED CORE");
@@ -31,13 +32,16 @@ public class CoreScript : MonoBehaviour {
     {
         for (int i = 0; i > 120; i++)
         {
-            yield return null;
+            yield return new WaitForSeconds(3f);
         }
-		Application.LoadLevel("WinScreen");    
+		
+        //switch scene to winscene
         Debug.Log("WINSCREEN");
-        yield return new WaitForSeconds(0f);
+        Application.LoadLevel("WinScene"); 
+        yield return new WaitForSeconds(0f);    
     }
 
+    //decrease health
 	public void DecreaseHealth()
     {
         cHealthBar.DecreaseScale();

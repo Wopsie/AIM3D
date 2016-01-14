@@ -56,6 +56,7 @@ public class DeathCamera : MonoBehaviour {
 
     public void RefindPlayer()
     {
+        //get player instance
         player = GameObject.FindWithTag(Tags.playerTag).transform;
         Debug.Log(gameObject.tag + "found player");
     }

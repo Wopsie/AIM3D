@@ -26,6 +26,7 @@ public class TurretRange : MonoBehaviour
     {
         Plane.OnRenable += RefindPlayer;
 
+        //set layermask & get player distance from lasersight
         layerMask = LayerMask.GetMask("Player");
         targetDistance = GetComponentInChildren<LaserSight>();
     }
@@ -37,6 +38,7 @@ public class TurretRange : MonoBehaviour
 	
 	void Update () 
     {
+        //set turret shooting range with overlap sphere to radius of 650 and only check on player layermask
         turretRange = Physics.OverlapSphere(transform.position, 650f, layerMask);
 
         if (playerData != null && turretRange != null)
@@ -55,17 +57,9 @@ public class TurretRange : MonoBehaviour
 
     public void RefindPlayer()
     {
+        //get player instance
         player = GameObject.FindWithTag(Tags.playerTag);
         playerData = player.GetComponent<Plane>();
-    }
-
-    public void DestroyTurret()
-    {
-        int health = 20;
-        if(health <= 0)
-        {
-            Destroy(gameObject);
-        }
     }
 
     /*
@@ -73,6 +67,6 @@ public class TurretRange : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, 650f);
-    
+    }
      */
 }

@@ -9,6 +9,7 @@ public class Building : MonoBehaviour {
 
 	void Start () 
     {
+        //run refindplayer upon receiving event from player
         Plane.OnRenable += RefindPlayer;
 	}
 
@@ -19,6 +20,7 @@ public class Building : MonoBehaviour {
 
     public void RefindPlayer()
     {
+        //get player instance
         player = GameObject.FindWithTag(Tags.playerTag);
         pHealth = player.GetComponent<PlayerHealth>();
         Debug.Log(gameObject.tag + " found player");
@@ -26,6 +28,7 @@ public class Building : MonoBehaviour {
 	
     void OnCollisionEnter(Collision coll)
     {
+        //check for collision with player
         if(coll.gameObject.tag == Tags.playerTag)
         {
             pHealth.NullHealth();

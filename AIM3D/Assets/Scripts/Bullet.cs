@@ -34,6 +34,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
+        //check for collision with building or asteroid
         if(coll.gameObject.tag == Tags.buildingTag || coll.gameObject.tag == Tags.asteroidTag)
         {
             Destroy(gameObject);
@@ -42,6 +43,7 @@ public class Bullet : MonoBehaviour
         //check if current bullet is red
         if(gameObject.tag == Tags.rBulletTag)
         {
+            //check for collision with player
             if (coll.gameObject.tag == Tags.planeTag)
             {
                 pHealth.DecrHealth();
@@ -52,15 +54,14 @@ public class Bullet : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            //identify bullet through tag
         }else if(gameObject.tag == Tags.bBulletTag)
         {
+            //check for collision with core
             if(coll.gameObject.tag == Tags.coreTag)
             {
                 Debug.Log("CORE HIT");
                 coreHealth.DecreaseHealth();
-            }else if(coll.gameObject.tag == Tags.turretTag)
-            {
-                Debug.Log("destroy turret?");
             }
         } 
     }

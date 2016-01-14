@@ -39,11 +39,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void NullHealth()
     {
+        //remove all remaining health
         health -= health;
     }
     
     public void FullHealth()
     {
+        //reset health to full
         health += 25;
         Debug.Log("FULL HEALTH");
     }
@@ -51,11 +53,11 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         Debug.Log("player health is ... " + health);
+        //if health is zero say *boom*
         if (health <= 0)
         {
             Debug.Log("JE BENT HARSTIKKE DOOD");
             explosion.Death();
-            //Camera.main.enabled = false;
             dCam.MoveCamBack();
             Destroy(gameObject);
         }       

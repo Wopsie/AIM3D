@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class Tags {
-
     public const string playerTag = "Player";
     public const string planeTag = "Plane";
     public const string bBulletTag = "BlueBullet";

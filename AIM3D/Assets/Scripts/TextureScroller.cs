@@ -5,7 +5,7 @@ public class TextureScroller : MonoBehaviour
 {
     public float speed = 0.5f;
 
-    // Update is called once per frame
+    //scroll texture on object
     void Update()
     {
         Vector2 offset = new Vector2(Time.time * speed, 0);

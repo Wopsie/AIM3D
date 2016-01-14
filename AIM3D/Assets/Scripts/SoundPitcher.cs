@@ -9,17 +9,16 @@ public class SoundPitcher : MonoBehaviour {
     public float maxPitch;
     public float minPitch;
 
-	// Use this for initialization
 	void Start () {
         plane = GetComponent<Plane>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-        
+	void Update () 
+    {
+        //check if controller A button is pushed
         if(Input.GetButton("A"))
         {
-            
+            //increase engine sound pitch untill max
             engineSound.pitch += Time.deltaTime * 2f;
             if(engineSound.pitch > maxPitch)
             {
@@ -28,12 +27,12 @@ public class SoundPitcher : MonoBehaviour {
         }
         else
         {
+            //if controller A button is released lower pitch untill minimum
             engineSound.pitch -= Time.deltaTime * 2;
             if(engineSound.pitch < minPitch)
             {
                 engineSound.pitch = minPitch;
             }
-            
         }
 	}
 }

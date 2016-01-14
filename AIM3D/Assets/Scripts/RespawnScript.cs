@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class RespawnScript : MonoBehaviour {
 
@@ -16,6 +17,8 @@ public class RespawnScript : MonoBehaviour {
     private Building buildingScript;
     private TurretRange turretScript;
     private DeathCamera deathCamScript;
+
+    [SerializeField]    private Text livesText;
 
     void Start()
     {
@@ -34,29 +37,26 @@ public class RespawnScript : MonoBehaviour {
 
         turret = GameObject.FindWithTag(Tags.turretTag);
         turretScript = turret.GetComponent<TurretRange>();
+
+        livesText.text = "LIVES: " + lives.ToString();
     }
 
     public void Respawn()
     {
-        //check for sufficient lives
-        
+        //check for sufficient lives for respawn
         if(lives > 0)
         {
-            //Debug.Log("respawning... " + lives);
-            //add new player on respawn location & reenable main camera & disable deathcamera
+            //add new player on respawn location & reenable main camera & disable deathcamera & update lives text
             Instantiate(player, transform.position, transform.rotation);
             deathCam.enabled = false;
             Camera.main.enabled = true;
             trackerScript.RefindPlayer();
-            //turret
-            //building
             lives--;
-            Debug.Log(lives + " lives left");
+            livesText.text = "LIVES: " + lives.ToString();
         }
         else
         {
             //deathsceen
-
             Debug.Log("Mission Failed");
 			Application.LoadLevel("LoseScene");
         }

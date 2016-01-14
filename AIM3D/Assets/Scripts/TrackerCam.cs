@@ -7,6 +7,7 @@ public class TrackerCam : MonoBehaviour
 
     void Start()
     {
+        //run refind player upon receiving event from player
         Plane.OnRenable += RefindPlayer;
         RefindPlayer();
     }
@@ -21,7 +22,6 @@ public class TrackerCam : MonoBehaviour
             Camera.main.transform.position = Camera.main.transform.position * bias + moveCamTo * (1f - bias);
             Camera.main.transform.LookAt(player.transform.position + player.transform.forward * 60f);
         }
-        
 	}
 
     void OnDisable()
@@ -31,6 +31,7 @@ public class TrackerCam : MonoBehaviour
 
     public void RefindPlayer()
     {
+        //get player instance
         player = GameObject.FindWithTag(Tags.playerTag);
         Debug.Log(gameObject.tag + "found player");
     }

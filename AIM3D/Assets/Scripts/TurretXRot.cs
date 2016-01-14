@@ -23,6 +23,7 @@ public class TurretXRot : MonoBehaviour
 
     void FixedUpdate()
     {
+        //reduce shootcooldown untill zero
         shootCoolDown--;
         if(shootCoolDown < 0)
         {
@@ -31,8 +32,7 @@ public class TurretXRot : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    { 
         //if object is within range
         if(turretRangeScript.turretRange.Length > 0)
         {
@@ -44,7 +44,7 @@ public class TurretXRot : MonoBehaviour
             if (shootCoolDown == 0 && targetVisible == true)
             {
                 shootClass.Shoot();
-                shootCoolDown = 10;
+                shootCoolDown = 15;
             }
 
             //stop rotation at certain angle
@@ -56,12 +56,6 @@ public class TurretXRot : MonoBehaviour
             {
                 targetVisible = true;
             }
-        }
-        else
-        {
-            //Debug.Log("no X Target found");
-        }
-
-        
+        }  
     }
 }
