@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 
     private Explosion explosion;
     private DeathCamera dCam;
-    private HealthBar pHealthBarScript;
+    private PlayerHealthbar pHealthBarScript;
     private CameraShake camShake;
     private GameObject dCamera;
     private GameObject respawn;
@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         pHealthBar = GameObject.FindWithTag(Tags.playerHealthbar);
-        pHealthBarScript = pHealthBar.GetComponent<HealthBar>();
+        pHealthBarScript = pHealthBar.GetComponent<PlayerHealthbar>();
 
         explosion = GetComponent<Explosion>();
 

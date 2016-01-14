@@ -12,13 +12,13 @@ public class Plane : MonoBehaviour {
     private Vector3 oldVector = Vector3.zero;
     public delegate void ResetPlayer();
     public static event ResetPlayer OnRenable;
-    private HealthBar pHealthBarScript;
+    private PlayerHealthbar pHealthBarScript;
     private GameObject pHealthBar;
 
     void Start()
     {
         pHealthBar = GameObject.FindWithTag(Tags.playerHealthbar);
-        pHealthBarScript = pHealthBar.GetComponent<HealthBar>();
+        pHealthBarScript = pHealthBar.GetComponent<PlayerHealthbar>();
         pHealthBarScript.ResetScale();
 
         if (OnRenable != null)

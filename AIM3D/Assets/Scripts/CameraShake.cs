@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraShake : MonoBehaviour {
 
-    private float shakePower = 0.5f;
+    private float shakePower = 0.7f;
     private float duration = 0.5f;
     //private Vector3 initialPos;
     private bool isShaking = false;
