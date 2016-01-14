@@ -1,0 +1,671 @@
+fileFormatVersion: 2
+guid: f4012b9c8bcce4ec6a87f3cf6ad07d32
+timeCreated: 1452795425
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Main_menu_sheet_0
+    21300002: Main_menu_sheet_1
+    21300004: Main_menu_sheet_2
+    21300006: Main_menu_sheet_3
+    21300008: Main_menu_sheet_4
+    21300010: Main_menu_sheet_5
+    21300012: Main_menu_sheet_6
+    21300014: Main_menu_sheet_7
+    21300016: Main_menu_sheet_8
+    21300018: Main_menu_sheet_9
+    21300020: Main_menu_sheet_10
+    21300022: Main_menu_sheet_11
+    21300024: Main_menu_sheet_12
+    21300026: Main_menu_sheet_13
+    21300028: Main_menu_sheet_14
+    21300030: Main_menu_sheet_15
+    21300032: Main_menu_sheet_16
+    21300034: Main_menu_sheet_17
+    21300036: Main_menu_sheet_18
+    21300038: Main_menu_sheet_19
+    21300040: Main_menu_sheet_20
+    21300042: Main_menu_sheet_21
+    21300044: Main_menu_sheet_22
+    21300046: Main_menu_sheet_23
+    21300048: Main_menu_sheet_24
+    21300050: Main_menu_sheet_25
+    21300052: Main_menu_sheet_26
+    21300054: Main_menu_sheet_27
+    21300056: Main_menu_sheet_28
+    21300058: Main_menu_sheet_29
+    21300060: Main_menu_sheet_30
+    21300062: Main_menu_sheet_31
+    21300064: Main_menu_sheet_32
+    21300066: Main_menu_sheet_33
+    21300068: Main_menu_sheet_34
+    21300070: Main_menu_sheet_35
+    21300072: Main_menu_sheet_36
+    21300074: Main_menu_sheet_37
+    21300076: Main_menu_sheet_38
+    21300078: Main_menu_sheet_39
+    21300080: Main_menu_sheet_40
+    21300082: Main_menu_sheet_41
+    21300084: Main_menu_sheet_42
+    21300086: Main_menu_sheet_43
+    21300088: Main_menu_sheet_44
+    21300090: Main_menu_sheet_45
+    21300092: Main_menu_sheet_46
+    21300094: Main_menu_sheet_47
+    21300096: Main_menu_sheet_48
+    21300098: Main_menu_sheet_49
+    21300100: Main_menu_sheet_50
+    21300102: Main_menu_sheet_51
+    21300104: Main_menu_sheet_52
+    21300106: Main_menu_sheet_53
+    21300108: Main_menu_sheet_54
+    21300110: Main_menu_sheet_55
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Main_menu_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 4560
+        width: 348
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 4560
+        width: 353
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 4560
+        width: 355
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 4560
+        width: 357
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 4560
+        width: 356
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 4560
+        width: 353
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 4560
+        width: 348
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 4030
+        width: 344
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 4030
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 4030
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 4030
+        width: 344
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 4030
+        width: 344
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 4030
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 4030
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 3500
+        width: 344
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 3500
+        width: 343
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 3500
+        width: 343
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 3500
+        width: 344
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 3500
+        width: 344
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 3500
+        width: 343
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 3500
+        width: 343
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 2970
+        width: 344
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 2970
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 2970
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 2970
+        width: 344
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 2970
+        width: 344
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 2970
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 2970
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 2440
+        width: 344
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 2440
+        width: 347
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 2440
+        width: 352
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 2440
+        width: 355
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 2440
+        width: 355
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 2734
+        y: 2440
+        width: 352
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 3268
+        y: 2440
+        width: 348
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1911
+        width: 344
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1911
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 1911
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1911
+        width: 344
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 1911
+        width: 344
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 1911
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 1911
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1377
+        width: 344
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1372
+        width: 343
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 1369
+        width: 343
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1369
+        width: 344
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 1370
+        width: 344
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 1374
+        width: 343
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 1379
+        width: 343
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 851
+        width: 344
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 851
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 850
+        width: 343
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 851
+        width: 344
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 851
+        width: 344
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 851
+        width: 343
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Main_menu_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 851
+        width: 347
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
