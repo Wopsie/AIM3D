@@ -23,8 +23,10 @@ public class StarParticle : MonoBehaviour
         
     private void CreateStar()
     {
+        //set array for star particles around player
         stars = new ParticleSystem.Particle[starMax];
 
+        //randomize star position within unitsphere, set size & color
         for(int i = 0; i < starMax; i++)
         {
             stars[i].position = Random.insideUnitSphere * starDist + starParticle.position;
@@ -35,18 +37,22 @@ public class StarParticle : MonoBehaviour
 
     void Update()
     {
+        //if no stars are on screen spawn new stars
         if(stars == null)
         {
             CreateStar();
         }
 
+        //check if max amount of stars is reached and increment untill it is
         for(int i = 0; i < starMax; i++)
         {
+            //make particles spawn on correct place in relation to player position
             if((stars[i].position - starParticle.position).sqrMagnitude > starDistSqr)
             {
                 stars[i].position = Random.insideUnitSphere.normalized * starDist + starParticle.position;
             }
             
+            //make stars fade out in relation to player player position
             if((stars[i].position - starParticle.position).sqrMagnitude <= starClipDistSqr)
             {
                 float percent = (stars[i].position - starParticle.position).sqrMagnitude / starClipDistSqr;
