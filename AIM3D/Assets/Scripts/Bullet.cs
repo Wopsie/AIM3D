@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
     private GameObject turret;
     private CoreScript coreHealth;
     private TurretRange turretRangeScript;
+    private Explosion explosion;
 
 
 	void Start () 
@@ -22,6 +23,8 @@ public class Bullet : MonoBehaviour
         coreHealth = core.GetComponent<CoreScript>();
         pHealth = player.GetComponent<PlayerHealth>();
         turretRangeScript = turret.GetComponent<TurretRange>();
+
+        explosion = GetComponent<Explosion>();
 	}
 	
 	void Update () {
@@ -49,10 +52,12 @@ public class Bullet : MonoBehaviour
                 pHealth.DecrHealth();
                 Destroy(gameObject);
                 Debug.Log("Destroyed on player collision");
+                explosion.Death();
             }
             else
             {
                 Destroy(gameObject);
+                explosion.Death();
             }
             //identify bullet through tag
         }else if(gameObject.tag == Tags.bBulletTag)
@@ -62,6 +67,8 @@ public class Bullet : MonoBehaviour
             {
                 Debug.Log("CORE HIT");
                 coreHealth.DecreaseHealth();
+                Destroy(gameObject);
+                explosion.Death();
             }
         } 
     }

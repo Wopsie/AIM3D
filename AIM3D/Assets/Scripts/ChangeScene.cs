@@ -9,6 +9,17 @@ public class ChangeScene : MonoBehaviour {
 		Application.LoadLevel (sceneToChangeTo);
 	}
 
+    public void ChangeSceneAfter()
+    {
+        StartCoroutine("SwitchScene");
+    }
+
+    IEnumerator SwitchScene()
+    {
+        yield return new WaitForSeconds(2f);
+        Application.LoadLevel("WinScene");
+    }
+
     //quit gimma
 	public void Quit()
 	{

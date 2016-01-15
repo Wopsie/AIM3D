@@ -23,9 +23,10 @@ public class Explosion : MonoBehaviour
     //instantiate explosion, play explosion sound
     IEnumerator DeathEvent()
     {
-        Instantiate(explosion, transform.position, Quaternion.identity);
+        GameObject explosionParticle = (GameObject)Instantiate(explosion, transform.position, Quaternion.identity);
         explosionSound.Play();
-        yield return new WaitForSeconds(3f);
-        Destroy(gameObject);
+        Destroy(explosionParticle, 5);
+        yield return new WaitForSeconds(0f);
+
     }
 }

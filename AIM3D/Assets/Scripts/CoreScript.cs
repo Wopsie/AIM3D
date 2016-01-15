@@ -7,9 +7,13 @@ public class CoreScript : MonoBehaviour {
     private Explosion explosion;
     private GameObject cHealth;
     private HealthBar cHealthBar;
+    private ChangeScene changeScene;
+    private GameObject SceneSwitcher;
 
     void Start()
     {
+        SceneSwitcher = GameObject.Find("SceneSwitcher");
+        changeScene = SceneSwitcher.GetComponent<ChangeScene>();
         cHealth = GameObject.FindWithTag(Tags.coreHealthbar);
         cHealthBar = cHealth.GetComponent<HealthBar>();
         explosion = GetComponent<Explosion>();
@@ -22,23 +26,11 @@ public class CoreScript : MonoBehaviour {
         {
             Debug.Log("DESTROYED CORE");
             explosion.Death();
+            changeScene.ChangeSceneAfter();
             Destroy(gameObject);
 
-            StartCoroutine("WinScreen");
+            
         }
-    }
-
-    IEnumerator WinScreen()
-    {
-        for (int i = 0; i > 120; i++)
-        {
-            yield return new WaitForSeconds(3f);
-        }
-		
-        //switch scene to winscene
-        Debug.Log("WINSCREEN");
-        Application.LoadLevel("WinScene"); 
-        yield return new WaitForSeconds(0f);    
     }
 
     //decrease health

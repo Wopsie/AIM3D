@@ -9,6 +9,7 @@ public class CameraShake : MonoBehaviour {
 	
 	void Update () 
     {
+        //shake camera
         if(isShaking)
         {
             transform.localPosition = transform.localPosition + Random.insideUnitSphere * shakePower;
