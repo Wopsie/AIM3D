@@ -17,6 +17,7 @@ public class Plane : MonoBehaviour {
 
     private PlayerHealthbar pHealthBarScript;
     private GameObject pHealthBar;
+    private float turnSpeed;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class Plane : MonoBehaviour {
     void Update()
     {
         playerRot = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+        //turnSpeed = transform.rotation.eulerAngles.z / (360f * (transform.rotation.eulerAngles.z * 1000000000));
     }
     
     //inputs in fixed update eigenlijk heel slecht... Noted
@@ -40,7 +42,7 @@ public class Plane : MonoBehaviour {
         oldVector = this.transform.position;
 
         transform.position += transform.forward * Time.deltaTime * speed;
-
+        
         speed -= transform.forward.y * Time.deltaTime * 50f;
         float maxSpeed = 160f;
 
@@ -90,6 +92,8 @@ public class Plane : MonoBehaviour {
         {
             //bank & turn right
             transform.Rotate(new Vector3(0, 1.5f, 0), Space.World);
+            //transform.Rotate(new Vector3(0, turnSpeed, 0), Space.World);
+            //bank
             transform.Rotate(new Vector3(0f, 0f, -2.5f), Space.Self);
 
             if(transform.rotation.eulerAngles.z > 180 && transform.rotation.eulerAngles.z < 280)
@@ -101,6 +105,7 @@ public class Plane : MonoBehaviour {
         {
             //bank & turn left
             transform.Rotate(new Vector3(0, -1.5f, 0), Space.World);
+            //bank
             transform.Rotate(new Vector3(0f, 0f, 2.5f), Space.Self);
 
             if (transform.rotation.eulerAngles.z > 80 && transform.rotation.eulerAngles.z < 180)
